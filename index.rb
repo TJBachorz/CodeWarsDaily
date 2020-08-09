@@ -25,3 +25,10 @@ def series_sum(n)
 end
 
 #-----------------------
+#8/9/20
+
+def find_short(string)
+  string.split(" ").min {|a, b| a.length <=> b.length}.length
+end
+
+#-------------------
