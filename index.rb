@@ -31,4 +31,11 @@ def find_short(string)
   string.split(" ").min {|a, b| a.length <=> b.length}.length
 end
 
-#-------------------
+#-----------------------
+#8/10/20
+
+def no_space(x)
+  x.split(" ").join("")
+end
+
+#-----------------------
