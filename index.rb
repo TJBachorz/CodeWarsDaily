@@ -47,3 +47,10 @@ def litres(time)
 end
 
 #-----------------------
+#8/12/20
+
+def filter_list(l)
+  l.select {|item| item.class == Integer}
+end
+
+#-----------------------
