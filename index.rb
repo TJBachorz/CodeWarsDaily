@@ -54,3 +54,19 @@ def filter_list(l)
 end
 
 #-----------------------
+#8/13/20
+
+def order(words)
+  words = words.split(" ")
+  num = '1'
+  reformmatted = []
+  until num.to_i > words.length do
+    reformmatted << words.find { |word| word.include? num }
+    num = (num.to_i + 1).to_s
+  end
+  reformmatted.join(" ")
+end
+
+#p order("thi2s is3 my1 fake4 sente5nce")
+
+#----------------------
