@@ -69,4 +69,20 @@ end
 
 #p order("thi2s is3 my1 fake4 sente5nce")
 
-#----------------------
+#------------------------------
+#8/14/20
+
+def basic_op(operator, value1, value2)
+  case operator
+  when "+"
+    value1 + value2
+  when "-"
+    value1 - value2
+  when "*"
+    value1 * value2
+  when "/"
+    value1 / value2
+  end
+end
+
+#------------------------------
