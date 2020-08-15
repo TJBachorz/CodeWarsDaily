@@ -85,4 +85,22 @@ def basic_op(operator, value1, value2)
   end
 end
 
+def duplicate_encode(word)
+  word.chars do |letter| 
+    if word.count(letter.downcase) > 1 && letter != "(" && letter != ")"
+      word = word.gsub(letter, ")")
+    else 
+      word = word.gsub(letter, "(")
+    end
+  end
+  word
+end
+
+#------------------------------
+# 8/15/20
+
+def is_square(x)
+  x >= 0 && Integer.sqrt(x)**2 == x
+end
+
 #------------------------------
