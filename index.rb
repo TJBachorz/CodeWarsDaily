@@ -104,3 +104,14 @@ def is_square(x)
 end
 
 #------------------------------
+# 8/16/20
+
+def openOrSenior(data)
+  data.map do |item|
+    if item[0] >= 55 && item[1] > 7
+      "Senior"
+    else
+      "Open"
+    end
+  end
+end
