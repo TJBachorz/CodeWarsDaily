@@ -115,3 +115,13 @@ def openOrSenior(data)
     end
   end
 end
+
+#--------------------------------
+# 8/17/20
+
+def high_and_low(numbers)
+  "#{numbers.split(' ').max {|a, b| a.to_i <=> b.to_i}} #{numbers.split(' ').min {|a, b| a.to_i <=> b.to_i}}"
+end
+
+p high_and_low("1 2 3 4 5 6")
+#-----------------------------------
