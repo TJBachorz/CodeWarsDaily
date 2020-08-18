@@ -125,3 +125,17 @@ end
 
 p high_and_low("1 2 3 4 5 6")
 #-----------------------------------
+# 8/18/20
+
+def nb_dig(n, d)
+  total = 0
+  i = 0
+  until i > n do
+    x = (i**2).to_s
+    total += x.count(d.to_s)
+    i += 1
+  end
+  total
+end
+
+#-----------------------------------
