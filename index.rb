@@ -139,3 +139,13 @@ def nb_dig(n, d)
 end
 
 #-----------------------------------
+# 8/19/20
+
+def sum_two_smallest_numbers(numbers)
+  numbers.min(2).reduce(:+)
+end
+
+#-----------------------------------
+
+
+
