@@ -123,7 +123,6 @@ def high_and_low(numbers)
   "#{numbers.split(' ').max {|a, b| a.to_i <=> b.to_i}} #{numbers.split(' ').min {|a, b| a.to_i <=> b.to_i}}"
 end
 
-p high_and_low("1 2 3 4 5 6")
 #-----------------------------------
 # 8/18/20
 
@@ -146,6 +145,21 @@ def sum_two_smallest_numbers(numbers)
 end
 
 #-----------------------------------
+# 8/20/20
 
+def likes(names)
+  case names.size
+  when 0
+    "no one likes this"
+  when 1
+    "#{names[0]} likes this"
+  when 2
+    "#{names[0]} and #{names[1]} like this"
+  when 3
+    "#{names[0]}, #{names[1]} and #{names[2]} like this"
+  else
+    "#{names[0]}, #{names[1]} and #{names.length - 2} others like this"
+  end
+end
 
-
+#------------------------------------
