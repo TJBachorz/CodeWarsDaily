@@ -163,3 +163,24 @@ def likes(names)
 end
 
 #------------------------------------
+# 8/22/20
+
+def XO(str)
+  x = 0
+  o = 0
+  str = str.split("")
+  str.each do |char| 
+    if char == "x" or char == "X"
+      x += 1
+    elsif char == "o" or char == "O"
+      o += 1
+    end
+  end
+  if x == o
+    return true
+  else 
+    false
+  end
+end
+
+#----------------------------------
