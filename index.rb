@@ -202,3 +202,17 @@ def get_sum(a,b)
 end
 
 #---------------------------------
+# 8/25/20
+
+def unique_in_order(iterable)
+  return [] if iterable == []
+  if iterable.class == Array && !(iterable.any? String)
+    return iterable.map {|num| num.to_s}.join.squeeze.split("").map(&:to_i)
+  elsif iterable.class == Array && !(iterable.any? Integer)
+    iterable.join.squeeze.split('')
+  else
+    iterable.squeeze.split('')
+  end
+end
+
+#--------------------------------
