@@ -216,3 +216,15 @@ def unique_in_order(iterable)
 end
 
 #--------------------------------
+# 8/26/20
+
+def delete_nth(order,max_e)
+  order.reverse!.each_with_index do |num, index|
+    if order.count(num) > max_e
+      order.slice!(index)
+    end
+  end
+  order.reverse!
+end 
+
+#-------------------------------
