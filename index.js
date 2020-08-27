@@ -13,5 +13,8 @@ function count (string) {
     return hash;
 }
 
-console.log(count("banana"))
+function descendingOrder(n){
+    return parseInt(String(n).split('').sort().reverse().join(''))
+}
+
 //----------------------------------------
