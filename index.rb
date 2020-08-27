@@ -228,3 +228,12 @@ def delete_nth(order,max_e)
 end 
 
 #-------------------------------
+# 8/27/20
+
+def count_chars(s)
+  hash = Hash.new(0)
+  s.split("").map { |char| hash[char] += 1 }
+  hash
+end
+
+#------------------------------
