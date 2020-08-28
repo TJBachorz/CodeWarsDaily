@@ -18,3 +18,12 @@ function descendingOrder(n){
 }
 
 //----------------------------------------
+// 8/28/20
+
+function comp(array1, array2) {
+    if (!array1 || !array2) return false
+    const answer = array1.filter(value => array2.includes(value * value))
+    return true ? answer.length == array1.length : false
+}
+
+//-----------------------------------------
