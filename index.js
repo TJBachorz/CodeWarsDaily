@@ -27,3 +27,12 @@ function comp(array1, array2) {
 }
 
 //-----------------------------------------
+// 8/29/20
+
+function reverseWords(str) {
+    str = str.split(' ')
+    str = str.map(word => word.split('').reverse().join(''))
+    return str.join(' ')
+}
+
+//-----------------------------------------
