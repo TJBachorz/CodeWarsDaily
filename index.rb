@@ -243,6 +243,20 @@ def bool_to_word bool
   bool ? "Yes" : "No"
 end
 
+#-------------------------------
+# 8/31/20
+
+def binary_array_to_number(arr)
+  index = 1
+  multiplier = 1
+  while index <= arr.length do
+    arr[-index] *= multiplier
+    multiplier *= 2
+    index += 1
+  end
+  arr.reduce(:+)
+end
+
 #----------------------------
 # 9/5/20
 
