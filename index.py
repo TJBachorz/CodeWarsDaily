@@ -16,9 +16,12 @@ def get_sum(a,b):
         return sum(range(b, a+1, 1))
 
 #--------------------------------------------
+# 8/30/20
 
+def bool_to_word(boolean):
+    return "Yes" if boolean else "No"
 
-
+#--------------------------------------------
 
 
 

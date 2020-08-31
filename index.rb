@@ -237,3 +237,10 @@ def count_chars(s)
 end
 
 #------------------------------
+# 8/30/20
+
+def bool_to_word bool
+  bool ? "Yes" : "No"
+end
+
+#----------------------------

@@ -36,3 +36,17 @@ function reverseWords(str) {
 }
 
 //-----------------------------------------
+// 8/30/20
+
+function boolToWord( bool ){
+    return bool ? "Yes" : "No"
+}
+
+//------------------------------------------
+// 8/31/20
+
+function makeNegative(num) {
+    return num < 0 ? num : -(num)
+}
+
+//-----------------------------------------
