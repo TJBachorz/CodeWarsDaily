@@ -50,3 +50,14 @@ function makeNegative(num) {
 }
 
 //-----------------------------------------
+// 9/1/20
+
+function domainName(url){
+    url.includes("www.") ? url = url.split("www.").join("") : url
+    url.includes("http://") ? url = url.split("http://").join("") : url
+    url.includes("https://") ? url = url.split("https://").join("") : url
+    url.includes(".") ? url = url.split(".") : url
+    return url[0]
+}
+
+//----------------------------------------
