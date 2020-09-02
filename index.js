@@ -58,5 +58,14 @@ function domainName(url){
     url.includes("https://") ? url = url.split("https://").join("") : url
     return url.split(".")[0]
 }
-
+// could use .replace instead of .split
 //----------------------------------------
+// 9/2/20
+
+function isPangram(string){
+    const letters = string.toLowerCase().match(/[a-z]/g)
+    const uniqueLetters = [...(new Set(letters))]
+    return uniqueLetters.length === 26 ? true : false
+}
+
+//---------------------------------------
