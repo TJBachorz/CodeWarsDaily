@@ -69,3 +69,14 @@ function isPangram(string){
 }
 
 //---------------------------------------
+// 9/3/20
+
+function isValidWalk(walk) {
+    const northSouth = walk.filter(x => x ==='n').length === walk.filter(x => x ==='s').length ? true : false
+    const length = walk.length === 10 ? true : false
+    const westEast = walk.filter(x => x ==='w').length === walk.filter(x => x ==='e').length ? true : false
+    return (northSouth && length & westEast)
+}
+
+//---------------------------------------
+  
