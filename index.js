@@ -79,4 +79,16 @@ function isValidWalk(walk) {
 }
 
 //---------------------------------------
-  
+// 9/4/20
+
+function camelCaseWithSpaces(camelCaseString) {
+    let array = camelCaseString.split("").map(letter => {
+      if (letter === letter.toUpperCase()) {
+        letter = " " + letter
+      }
+      return letter
+    })
+    return array.join("")
+}  
+
+//---------------------------------------
