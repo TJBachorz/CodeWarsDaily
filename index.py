@@ -22,7 +22,4 @@ def bool_to_word(boolean):
     return "Yes" if boolean else "No"
 
 #--------------------------------------------
-
-
-
-pdb.set_trace()
+# 9/4/20

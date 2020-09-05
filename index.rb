@@ -244,3 +244,10 @@ def bool_to_word bool
 end
 
 #----------------------------
+# 9/5/20
+
+def square_digits num
+  num.to_s.chars.map {|num| num.to_i ** 2 }.join().to_i
+end
+
+#-----------------------------

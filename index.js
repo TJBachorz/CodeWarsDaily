@@ -92,3 +92,12 @@ function camelCaseWithSpaces(camelCaseString) {
 }  
 
 //---------------------------------------
+// 9/5/20
+
+function squareDigits(num){
+    let splitInts = num.toString().split("")
+    splitInts = (splitInts.map(n => parseInt(n) * n)).join('')
+    return parseInt(splitInts)
+}
+
+//----------------------------------------
