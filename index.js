@@ -83,10 +83,10 @@ function isValidWalk(walk) {
 
 function camelCaseWithSpaces(camelCaseString) {
     let array = camelCaseString.split("").map(letter => {
-      if (letter === letter.toUpperCase()) {
+    if (letter === letter.toUpperCase()) {
         letter = " " + letter
-      }
-      return letter
+    }
+        return letter
     })
     return array.join("")
 }  
@@ -101,3 +101,16 @@ function squareDigits(num){
 }
 
 //----------------------------------------
+// 9/6/20
+
+function findNb(m) {
+    let currentVolume = 0
+    let n = 0
+    while (currentVolume < m) {
+        n++
+        currentVolume += n**3
+    }
+    return currentVolume === m ? n : -1
+}
+
+//---------------------------------------
