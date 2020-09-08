@@ -123,3 +123,31 @@ function twoSum(numbers, target) {
         }
     }
 }
+
+//--------------------------------------
+// 9/8/20
+
+function incrementString (string) {
+    nums = string.match(/\d/g)
+    string = string.split("")
+    let t = 0
+    console.log(nums)
+    while (nums !== null && t < nums.length) {
+        string.pop()
+        t++
+    }
+    string = string.join("")
+    nums !== null ? nums = nums.map(num => parseInt(num))
+    nums === null ? return string += 1
+    if (nums[nums.length-1] === 9) {
+        nums[nums.length - 1] = 0
+        nums[0] += 1
+        nums = nums.map(num => num.toString()).join('')
+    } else {
+        nums[nums.length - 1] += 1
+        nums = nums.map(num => num.toString()).join('')
+    }
+    return string + nums
+}
+
+//----------------------------------------
