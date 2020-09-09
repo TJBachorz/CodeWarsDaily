@@ -151,3 +151,20 @@ function incrementString (string) {
 }
 
 //----------------------------------------
+// 9/9/20
+
+function upArray(arr){
+    console.log(arr)
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0 || arr[i] > 9) {
+        return null
+        }
+    }
+    let num = arr.join("")
+    num = parseInt(num)
+    num += 1
+    num = num.toString().split("")
+    num = num.map(number => parseInt(number))
+    return num
+}
+//--------------------------------------
