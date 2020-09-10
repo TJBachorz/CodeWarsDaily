@@ -138,7 +138,7 @@ function incrementString (string) {
     }
     string = string.join("")
     nums !== null ? nums = nums.map(num => parseInt(num))
-    nums === null ? return string += 1
+    return nums === null ? string += 1 : null
     if (nums[nums.length-1] === 9) {
         nums[nums.length - 1] = 0
         nums[0] += 1
@@ -167,4 +167,25 @@ function upArray(arr){
     num = num.map(number => parseInt(number))
     return num
 }
+//--------------------------------------
+// 9/10/20
+
+function highestRank(arr){
+    console.log(arr)
+    let mostFrequent = 0
+    let count
+    let numberOfInstances = 0
+    for (let i = 0; i < arr.length; i++) {
+        count = arr.filter(num => num === arr[i]).length
+        if (count > numberOfInstances) {
+            mostFrequent = arr[i]
+            numberOfInstances = count
+        } else if (count === numberOfInstances && arr[i] > mostFrequent) {
+            mostFrequent = arr[i]
+            numberOfInstances = count
+        }
+    }
+    return mostFrequent
+}
+
 //--------------------------------------
