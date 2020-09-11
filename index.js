@@ -137,7 +137,7 @@ function incrementString (string) {
         t++
     }
     string = string.join("")
-    nums !== null ? nums = nums.map(num => parseInt(num))
+    nums !== null ? nums = nums.map(num => parseInt(num));
     return nums === null ? string += 1 : null
     if (nums[nums.length-1] === 9) {
         nums[nums.length - 1] = 0
@@ -189,3 +189,18 @@ function highestRank(arr){
 }
 
 //--------------------------------------
+// 9/11/20
+
+class FileNameExtractor {
+    static extractFileName (dirtyFileName) {
+    let nameArray = dirtyFileName
+      .split(/\d/)
+      .filter(element => element !== "")
+      .join().split("")
+    nameArray.shift()
+    nameArray = nameArray.join("").split(".")
+    return nameArray[0] + "." + nameArray[1];
+    }
+}
+
+//-------------------------------------
