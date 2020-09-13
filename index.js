@@ -194,9 +194,9 @@ function highestRank(arr){
 class FileNameExtractor {
     static extractFileName (dirtyFileName) {
     let nameArray = dirtyFileName
-      .split(/\d/)
-      .filter(element => element !== "")
-      .join().split("")
+        .split(/\d/)
+        .filter(element => element !== "")
+        .join().split("")
     nameArray.shift()
     nameArray = nameArray.join("").split(".")
     return nameArray[0] + "." + nameArray[1];
@@ -204,3 +204,18 @@ class FileNameExtractor {
 }
 
 //-------------------------------------
+// 9/12/20
+
+var sum_pairs=function(ints, s){
+    let minIndex = Infinity
+    let answer
+    for (let i = 0; i < ints.length; i++) {
+        for (let j = i+1; j < ints.length; j++) {
+        if (ints[i] + ints[j] === s && j < minIndex)  {
+            minIndex = j
+            answer = [ints[i], ints[j]]
+        }
+        }
+    }
+    return answer
+    }
