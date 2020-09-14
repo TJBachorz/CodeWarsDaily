@@ -255,3 +255,22 @@ function tickets(peopleInLine){
 }
 
 //----------------------------------------------------
+// 9/14/20
+
+function stringTransformer(str) {
+    str = str.split(" ").reverse()
+    let answer = []
+    str.map(string => {
+        string.split("").map((letter, index, array) => {
+        if (array[index] === array[index].toUpperCase()) {
+            array.splice(index, 1, letter.toLowerCase())
+        } else {
+            array.splice(index, 1, letter.toUpperCase())
+        }
+        if (index === array.length - 1) {
+            answer.push(array.join(""))
+        }
+        })
+    })
+    return answer.join(" ")
+}
