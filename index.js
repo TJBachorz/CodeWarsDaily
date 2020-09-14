@@ -219,3 +219,39 @@ var sum_pairs=function(ints, s){
     }
     return answer
     }
+
+//--------------------------------------------
+// 9/13/20
+
+function tickets(peopleInLine){
+    let answer = "YES"
+    let cashOnHand = {};
+    peopleInLine.forEach(person => {
+        if (!cashOnHand[person.toString()]) {
+            cashOnHand[person.toString()] = 1
+        } else {
+            cashOnHand[person.toString()] += 1
+        }
+        person -= 25
+        switch(person) {
+            case 75:
+            case 50:
+                if (cashOnHand["50"] >= 1) {
+                cashOnHand["50"] -= 1
+                person -= 50
+                }
+            case 25:
+                while (person >= 25 && cashOnHand["25"] >= 1) {
+                cashOnHand["25"] -= 1
+                person -= 25
+                }
+            case 0:
+                if (person !== 0) {
+                answer = "NO"
+                }
+        }
+    })
+    return answer
+}
+
+//----------------------------------------------------
