@@ -274,3 +274,22 @@ function stringTransformer(str) {
     })
     return answer.join(" ")
 }
+
+//-------------------------------------------
+// 9/15/20
+
+function abbreviate(string) {
+    let answer = ""
+    string = string.split(" ")
+    string.forEach(word => {
+        if (word.length < 4) {
+        return string[string.length-1] === word ? answer = answer.concat(word, " ") : answer = answer.concat(word)
+  //     } else if (word.includes(/-/)) {
+  //       word.split("")
+  //       answer = answer.concat(word[0], (word.length-2), word[word.length - 1])
+        } else {
+        }
+        
+    })
+    return answer
+}
