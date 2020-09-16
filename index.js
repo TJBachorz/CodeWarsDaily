@@ -283,13 +283,27 @@ function abbreviate(string) {
     string = string.split(" ")
     string.forEach(word => {
         if (word.length < 4) {
-        return string[string.length-1] === word ? answer = answer.concat(word, " ") : answer = answer.concat(word)
-  //     } else if (word.includes(/-/)) {
-  //       word.split("")
-  //       answer = answer.concat(word[0], (word.length-2), word[word.length - 1])
+            return string[string.length-1] === word ? answer = answer.concat(word, " ") : answer = answer.concat(word)
+        } else if (word.includes(/-/)) {
+            word.split("-").forEach(subWord => {
+                answer = answer.concat(word[0], (word.length-2), word[word.length - 1])
+            })
+            
         } else {
         }
         
     })
     return answer
 }
+
+//-----------------------------------------------
+// 9/16/20
+
+Array.prototype.square = function() {return this.map(n => n**2)}
+Array.prototype.cube = function() {return this.map(n => n**3)}
+Array.prototype.sum = function() {return this.reduce((acc, n) => acc += n)}
+Array.prototype.average = function() {return this.reduce((acc, n) => acc += n) / this.length}
+Array.prototype.even = function() {return this.filter(n => n % 2 === 0)}
+Array.prototype.odd = function() {return this.filter(n => n % 2 !== 0)}
+
+//------------------------------------------------
