@@ -137,7 +137,7 @@ function incrementString (string) {
         t++
     }
     string = string.join("")
-    nums !== null ? nums = nums.map(num => parseInt(num));
+    nums !== null ? nums = nums.map(num => parseInt(num)): num
     return nums === null ? string += 1 : null
     if (nums[nums.length-1] === 9) {
         nums[nums.length - 1] = 0
@@ -301,9 +301,34 @@ function abbreviate(string) {
 
 Array.prototype.square = function() {return this.map(n => n**2)}
 Array.prototype.cube = function() {return this.map(n => n**3)}
-Array.prototype.sum = function() {return this.reduce((acc, n) => acc += n)}
-Array.prototype.average = function() {return this.reduce((acc, n) => acc += n) / this.length}
+Array.prototype.sum = function() {return this.reduce((acc, n) => acc += n, 0)}
+Array.prototype.average = function() {return this.reduce((acc, n) => acc += n, 0) / this.length}
 Array.prototype.even = function() {return this.filter(n => n % 2 === 0)}
 Array.prototype.odd = function() {return this.filter(n => n % 2 !== 0)}
 
 //------------------------------------------------
+// 9/17/20
+
+function encrypt(text, n) {
+    if (n <= 0) 
+        return text 
+    text.split("")
+    let encryption = []
+    text = text.split("")
+    let t = 0
+    while (t < n) {
+        encryption = encryption.concat(text)
+        for (const [i, v] of encryption.entries()) {
+        console.log(i, v)
+        i % 2 == 0 ? encryption.splice(i, 1) : encryption[i]
+        t++
+        }
+    }
+    return encryption.join()
+}
+  
+function decrypt(encryptedText, n) {
+
+}
+
+//-------------------------------------------------
