@@ -332,3 +332,19 @@ function decrypt(encryptedText, n) {
 }
 
 //-------------------------------------------------
+// 9/18/20
+
+function bouncingBall(h,  bounce,  window) {
+    h = (h * bounce)
+    let views = 1
+    while (h > window) {
+        h = (h * bounce)
+        views += 2
+        console.log(h, window)
+    }
+    return views
+}
+
+"https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/javascript"
+
+//-------------------------------------------------
