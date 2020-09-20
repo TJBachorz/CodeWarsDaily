@@ -335,16 +335,13 @@ function decrypt(encryptedText, n) {
 // 9/18/20
 
 function bouncingBall(h,  bounce,  window) {
-    h = (h * bounce)
-    let views = 1
+    let views = -1
+    if (h <= 0 || bounce >= 1 || bounce <= 0 || window >= h) return views
     while (h > window) {
-        h = (h * bounce)
+        h *= bounce
         views += 2
-        console.log(h, window)
     }
     return views
 }
-
-"https://www.codewars.com/kata/5544c7a5cb454edb3c000047/train/javascript"
 
 //-------------------------------------------------
