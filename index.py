@@ -4,7 +4,7 @@ import pdb
 # 8/16/20 
 
 def reverse(string):
-   return string[::-1]
+    return string[::-1]
 
 #--------------------------------------------
 # 8/24/20
