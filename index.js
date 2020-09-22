@@ -349,17 +349,15 @@ function bouncingBall(h,  bounce,  window) {
 
 function stat(strg) {
     let h = [], m = [], s = []
-    strg = strg.split(',')
-    console.log(strg)
-    strg.forEach(stat => {
-        console.log(stat)
-        stat = stat.split("|")
-        console.log(stat)
-        h.push(stat[0])
-        m.push(stat[1])
-        s.push(stat[2])
-        console.log(h, m, s)
-    })
+        strg = strg.split(',')
+        strg.forEach(stat => {
+            stat = stat.split("|")
+            h.push(stat[0])
+            m.push(stat[1])
+            s.push(stat[2])
+        })
+        let range = `${Math.max(...h) - Math.min(...h)}|${Math.max(...m) - Math.min(...m)}|${Math.max(...s) - Math.min(...s)}`
+        console.log(range)
 }
 
 //------------------------------------------------
