@@ -361,3 +361,18 @@ function stat(strg) {
 }
 
 //------------------------------------------------
+// 9/23/20
+
+function multiplesOf3and5(number) {
+    let n = 0
+    let total = 0
+    while (n < number) {
+        if (n % 3 === 0 || n % 5 === 0) {
+            total += n
+        }
+        n++
+    }
+    return total
+}
+
+//----------------------------------------------
