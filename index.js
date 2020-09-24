@@ -365,14 +365,23 @@ function stat(strg) {
 
 function multiplesOf3and5(number) {
     let n = 0
-    let total = 0
+    let sum = 0
     while (n < number) {
         if (n % 3 === 0 || n % 5 === 0) {
-            total += n
+            sum += n
         }
         n++
     }
-    return total
+    return sum
 }
 
-//----------------------------------------------
+//------------------------------------------------
+// 9/24/20
+
+function ipToInt32(ip){
+    let splitIp = ip.split(".")
+    let bitmap = splitIp.map(snippet => (+snippet).toString(2))
+    console.log(bitmap.join(""))
+}
+
+//------------------------------------------------
