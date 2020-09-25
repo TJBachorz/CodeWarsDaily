@@ -379,9 +379,18 @@ function multiplesOf3and5(number) {
 // 9/24/20
 
 function ipToInt32(ip){
+    function make8Bit(string) {
+        while (string.length < 8) {
+            string = "0" + string
+        }
+        return string
+    }
     let splitIp = ip.split(".")
     let bitmap = splitIp.map(snippet => (+snippet).toString(2))
-    console.log(bitmap.join(""))
+    let paddedBitmap = bitmap.map(make8Bit)
+    let joinedBitmap = paddedBitmap.join('')    
+    let intParsedBitmap = +joinedBitmap
+    console.log(intParsedBitmap.toString(32))
 }
 
 //------------------------------------------------
