@@ -379,18 +379,30 @@ function multiplesOf3and5(number) {
 // 9/24/20
 
 function ipToInt32(ip){
+    let decimalArray = []
+    let i = 1
+    
     function make8Bit(string) {
         while (string.length < 8) {
             string = "0" + string
         }
         return string
     }
-    let splitIp = ip.split(".")
-    let bitmap = splitIp.map(snippet => (+snippet).toString(2))
+    
+    function mapTo32Bit(number) {
+      decimalArray[decimalArray.length] = (number * i)
+      i *= 2
+    }
+    
+    let bitmap = ip.split(".")
+        .map(snippet => (+snippet).toString(2))
     let paddedBitmap = bitmap.map(make8Bit)
-    let joinedBitmap = paddedBitmap.join('')    
-    let intParsedBitmap = +joinedBitmap
-    console.log(intParsedBitmap.toString(32))
+    let joinedBitmap = paddedBitmap
+        .join('')
+        .split("")
+        .reverse()
+    joinedBitmap.forEach(mapTo32Bit)
+    return decimalArray.reduce((acc, number) => acc + number)
 }
 
 //------------------------------------------------
