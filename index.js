@@ -406,3 +406,22 @@ function ipToInt32(ip){
 }
 
 //------------------------------------------------
+// 9/27/20
+
+Math.round = function(number) {
+    if (!number.toString().split("").includes(".")) {
+        return number
+    } else {
+        let splitNum = number.toString().split(".")
+    }; // TODO: fix this
+};
+
+Math.ceil = function(number) {
+return 0; // TODO: fix this
+};
+
+Math.floor = function(number) {
+return 0; // TODO: fix this
+};
+
+//-----------------------------------------
