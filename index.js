@@ -425,3 +425,24 @@ return 0; // TODO: fix this
 };
 
 //-----------------------------------------
+// 9/28/20
+
+function cleanString(s) {
+    function checkBackspaces(num, array) {
+        if (splitString[num] === "#") {
+            splitString.splice(num, 1)
+            splitString.splice(num - 1, 1)
+            num = num - 2
+        }
+    }
+    splitString = s.split("")
+    console.log(splitString)
+    for (let i = 0; i < splitString.length; i++) {
+        checkBackspaces(i, splitString)
+        console.log(splitString, "i=", i)
+    }
+    
+    return splitString
+}
+
+//------------------------------------------------
