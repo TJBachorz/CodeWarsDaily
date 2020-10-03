@@ -22,6 +22,18 @@ def bool_to_word(boolean):
     return "Yes" if boolean else "No"
 
 #--------------------------------------------
+# 10/3/20 
+
+def row_sum_odd_numbers(n):
+    row_start = 1
+    for i in range(2, 2*n, 2):
+        row_start += i    
+    row = []
+    for i in range(0, 2*n, 2):
+        row.append(row_start + i)
+    return sum(row)
+
+#--------------------------------------------
 # 10/4/20
 
 def odd_or_even(arr):
