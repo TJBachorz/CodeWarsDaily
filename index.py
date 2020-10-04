@@ -22,6 +22,12 @@ def bool_to_word(boolean):
     return "Yes" if boolean else "No"
 
 #--------------------------------------------
+# 10/4/20
+
+def odd_or_even(arr):
+    return "even" if sum(arr) % 2 == 0 else "odd" 
+
+#--------------------------------------------
 # 10/10/20
 
 def friend(x):
