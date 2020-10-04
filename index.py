@@ -22,6 +22,12 @@ def bool_to_word(boolean):
     return "Yes" if boolean else "No"
 
 #--------------------------------------------
+# 10/10/20
+
+def friend(x):
+    return [name for name in x if len(name) == 4]
+
+#--------------------------------------------
 # 10/11/20
 
 def array_diff(a, b):
