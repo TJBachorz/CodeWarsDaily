@@ -446,3 +446,12 @@ function cleanString(s) {
 }
 
 //------------------------------------------------
+// 10/5/20
+
+function solve(a,b){
+    let aSplit = a.split("*")
+    let bWithReplacement = b.replace(aSplit[0], "")
+    if  (bWithReplacement.match(aSplit[1]) && ) 
+}
+
+//------------------------------------------------
