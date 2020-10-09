@@ -448,10 +448,21 @@ function cleanString(s) {
 //------------------------------------------------
 // 10/5/20
 
-function solve(a,b){
-    let aSplit = a.split("*")
-    let bWithReplacement = b.replace(aSplit[0], "")
-    if  (bWithReplacement.match(aSplit[1]) && ) 
-}
+// function solve(a,b){
+//     let aSplit = a.split("*")
+//     let bWithReplacement = b.replace(aSplit[0], "")
+//     if  (bWithReplacement.match(aSplit[1]) && ) 
+// }
 
 //------------------------------------------------
+// 10/9/20
+
+let message = '1010100jon1001010jon101100jon100000jon1101110jon1101111jon100000jon1101000jon1101111jon1101111jon1101011jon1110011jon100000jon1110101jon1101110jon1110100jon1101001jon1101100jon100000jon1101110jon1100101jon1111000jon1110100jon100000jon1110111jon1100101jon1100101jon1101011jon101110jon100000jon1010111jon1101000jon1100001jon1110100jon100000jon1100001jon1110010jon1100101jon100000jon1111001jon1101111jon1110101jon100000jon1100001jon100000jon1100110jon1101001jon1110011jon1101000jon1100101jon1110010jon1101101jon1100001jon1101110jon111111'
+
+function decodeMsg(message) {
+    let mapped = message.split("jon")
+        .map(string => {   
+        return String.fromCharCode(parseInt(string, 2))
+    })
+    return mapped.join("")
+}
