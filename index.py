@@ -22,6 +22,12 @@ def bool_to_word(boolean):
     return "Yes" if boolean else "No"
 
 #--------------------------------------------
+# 10/11/20
+
+def array_diff(a, b):
+    return [num for num in a if num not in b]
+
+#--------------------------------------------
 # 10/26/20
 
 def even_or_odd(number):
@@ -46,6 +52,3 @@ def find_uniq(arr):
     return arr[0] if arr.count(arr[0]) == 1 else arr[-1]
 
 #--------------------------------------------------------
-# 10/12/20
-
-# github test
