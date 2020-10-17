@@ -539,7 +539,17 @@ function getPINs(observed) {
     let splitNum = observed.split("")
     let combos = []
     splitNum.forEach(num)
-  //   for (let i=0; i < splitNum.length; i++) {
-  //     splitNum[i]
-    }
 }
+
+//------------------------------------------
+// 10/17/20
+
+function letterCount(s){
+    let hashMap = {}
+    s.split("").map(letter => {
+        hashMap[letter] ? hashMap[letter] += 1 : hashMap[letter] = 1
+    })
+    return hashMap
+}
+
+//-------------------------------------------------
