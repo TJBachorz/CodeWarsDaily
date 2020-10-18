@@ -553,3 +553,51 @@ function letterCount(s){
 }
 
 //-------------------------------------------------
+// 10/18/20
+
+function streetFighterSelection(fighters, position, moves){
+    function upMove([pos1, pos2]) {
+        if (pos1 === 0) {
+            return fighters[pos1][pos2]
+        } else {
+            pos1 -= 1 
+            return fighters[pos1][pos2]
+        }
+    }
+    const downMove = ([pos1, pos2]) => {
+        if (pos1 === 1) {
+            return fighters[pos1][pos2]
+        } else {
+            pos1 += 1 
+            return fighters[pos1][pos2]
+        }
+    }
+    const leftMove = ([pos1, pos2]) => {
+        if (pos2 === 0) { 
+            pos2 = fighters[pos1].length - 1 
+            return fighters[pos1][pos2] 
+        } else {
+            pos2 -= 1 
+            return fighters[pos1][pos2]
+        }
+    }
+    const rightMove = ([pos1, pos2]) => {
+        if (pos2 === fighters[pos1].length - 1) {
+            pos2 = fighters[pos1].length - 1 
+            return fighters[pos1][pos2] 
+        } else { 
+            pos2 -= 1 
+            return fighters[pos1][pos2]
+        }
+    }
+    
+    const movesMap = {
+        'up': upMove([0,0]),
+        'down': downMove(position),
+        'right': rightMove(position),
+        'left': leftMove(position)
+    }
+    let fightersList = []
+    moves.forEach(move => fightersList.concat(movesMap[move]))
+    return fightersList;
+}
