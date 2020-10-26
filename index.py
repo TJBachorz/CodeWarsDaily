@@ -22,3 +22,9 @@ def bool_to_word(boolean):
     return "Yes" if boolean else "No"
 
 #--------------------------------------------
+# 10/26/20
+
+def even_or_odd(number):
+    return "Even" if number % 2 == 0 else "Odd"
+
+    
