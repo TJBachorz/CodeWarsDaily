@@ -27,4 +27,13 @@ def bool_to_word(boolean):
 def even_or_odd(number):
     return "Even" if number % 2 == 0 else "Odd"
 
-    
+def sum_array(arr):
+    if (arr == None or len(arr) < 3):
+        return 0
+    return sum(arr, 0) - max(arr) - min(arr) 
+
+#--------------------------------------------
+# 10/28/20
+
+def find_average(list):
+    return sum(list) / len(list)
