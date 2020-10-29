@@ -37,3 +37,10 @@ def sum_array(arr):
 
 def find_average(list):
     return sum(list) / len(list)
+
+#---------------------------------------------
+# 10/29/20
+
+def find_uniq(arr):
+    arr.sort()
+    return arr[0] if arr.count(arr[0]) == 1 else arr[-1]
