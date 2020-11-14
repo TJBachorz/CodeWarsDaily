@@ -601,3 +601,19 @@ function streetFighterSelection(fighters, position, moves){
     moves.forEach(move => fightersList.concat(movesMap[move]))
     return fightersList;
 }
+
+//------------------------------------------------------------
+// 11/14/20
+
+function solution(n){
+    let decimal = (n - Math.floor(n))
+    if (decimal >= 0.25 && decimal < 0.75) {
+        return Math.floor(n) + 0.5
+    } else if (decimal < 0.25) {
+        return Math.floor(n)
+    } else {
+        return Math.floor(n) + 1
+    }
+}
+
+//------------------------------------------------------------
