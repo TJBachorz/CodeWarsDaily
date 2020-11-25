@@ -632,3 +632,29 @@ function highestPossibleNumberVariableArgs(numbers) {
         )
     })
 }
+
+//------------------------------------------------------------------------
+// 11/25/20
+
+function revrot(str, sz) {
+    if (str === "" || sz <= 0 || sz > str.length) {
+        return "";
+    }
+    let digitList = str.slice(0, Math.floor(str.length / sz) * sz)
+    let reorderedString = []
+    for (let i = 0; i < (digitList.length / sz); i++) {
+      let snippet = digitList.slice(i * sz, (sz * (i + 1))).split("")
+        if (snippet
+            .map(Number)
+            .map(number => number**3)
+            .reduce((sum, num) => sum + num) % 2 === 0 
+        ) {
+            reorderedString.push(snippet.reverse().join(""))
+        } else {
+            let first = snippet.shift()
+            snippet[sz-1] = first
+            reorderedString.push(snippet.join(""))
+        }
+    }
+    return reorderedString.join("")
+}
