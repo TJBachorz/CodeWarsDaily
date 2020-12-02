@@ -658,3 +658,13 @@ function revrot(str, sz) {
     }
     return reorderedString.join("")
 }
+
+//----------------------------------------------------------------
+// 12/2/20
+
+function isAnArrayFullOfRoundedInts(arr) {
+    if (arr === null || typeof arr !== "object") {
+        return false;
+    }
+    return arr.every(element => typeof element === "number" && element % Math.floor(element) === 0) ? true : false
+}
