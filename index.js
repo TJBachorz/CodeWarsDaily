@@ -668,3 +668,20 @@ function isAnArrayFullOfRoundedInts(arr) {
     }
     return arr.every(element => typeof element === "number" && element % Math.floor(element) === 0) ? true : false
 }
+
+//-------------------------------------------------------------
+// 12/3/20
+
+function kebabize(str) {
+    str = str.split("")
+    str.map((letter, index) => {
+        if (letter === letter.toUpperCase() && isNaN(+letter) && index === 0) {
+            str[index] = letter.toLowerCase()
+        } else if (letter === letter.toUpperCase() && isNaN(+letter)) {
+            str[index] = "-" + letter.toLowerCase()
+        } else if (!isNaN(+letter)) {
+            str[index] = ""
+        }
+    })
+    return str.join("")
+}
