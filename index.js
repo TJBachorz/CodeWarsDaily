@@ -685,3 +685,24 @@ function kebabize(str) {
     })
     return str.join("")
 }
+
+//--------------------------------------------------------------
+// 12/4/20
+
+function longestConsec(strarr, k) {
+    let longestString = ""
+    if (k > strarr.length || k <= 0) {
+        return longestString
+    }
+    for (let i = 0; i < strarr.length; i++) {
+        if (i + k < strarr.length + 1) {
+            let str = strarr.slice(i, (i+k)).join("")
+            if (str.length > longestString.length) {
+                longestString = str
+            }
+        }
+    }
+    return longestString
+}  
+
+//-----------------------------------------------------------
