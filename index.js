@@ -706,3 +706,53 @@ function longestConsec(strarr, k) {
 }  
 
 //-----------------------------------------------------------
+// 12/12/20
+
+var whoEatsWho = function(zoo) {
+    const zooHash = {}
+    function createZooHash(predPreyArray) {
+        if (zooHash[predPreyArray[0]] === undefined) {
+            zooHash[predPreyArray[0]] = {}
+        }
+        zooHash[predPreyArray[0]][predPreyArray[1]] = `${predPreyArray[0]} eats ${predPreyArray[1]}`
+    }
+    predPreyArray = [
+        ["antelope", "grass"],
+        ["big-fish", "little-fish"],
+        ["bug", "leaves"],
+        ["bear", "big-fish"],
+        ["bear", "bug"],
+        ["bear", "chicken"],
+        ["bear", "cow"],
+        ["bear", "leaves"],
+        ["bear", "sheep"],
+        ["chicken", "bug"],
+        ["cow", "grass"],
+        ["fox", "chicken"],
+        ["fox", "sheep"],
+        ["giraffe", "leaves"],
+        ["lion", "antelope"],
+        ["lion", "cow"],
+        ["panda", "leaves"],
+        ["sheep", "grass"]
+    ]
+    predPreyArray.map(pair => createZooHash(pair))
+    let zooResults = [zoo]
+    let sample = zoo.split(",")
+    function eating() {
+        sample.map((animal, index) => {
+            if (index !== 0 && zooHash[animal] && zooHash[animal][sample[index-1]]) {
+                zooResults.push(zooHash[animal][sample[index-1]])
+                sample.splice(index-1, 1)
+                eating()
+            } else if (index !== sample.length-1 && zooHash[animal] && zooHash[animal][sample[index+1]]) {
+                zooResults.push(zooHash[animal][sample[index+1]])
+                sample.splice(index+1, 1)
+                eating()
+            }
+        })
+    }
+    eating()
+    zooResults.push(sample.join(","))
+    return zooResults
+}
