@@ -14,3 +14,9 @@ def divisors(n):
     return len([num for num in range(1, n+1) if n % num == 0])
 
 #-------------------------------------
+# 1/29/21
+
+def remove_url_anchor(url):
+    return url.split("#")[0]
+
+#-------------------------------------
