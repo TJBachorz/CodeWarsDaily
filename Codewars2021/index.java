@@ -1,3 +1,6 @@
+//-----------------------------------------------------------------------------
+// 9/5/21 
+
 import static java.util.Arrays.*;
 
 public class isogram {
@@ -6,3 +9,5 @@ public class isogram {
         return str.length() == str.toLowerCase().chars().distinct().count();
     } 
 }
+
+//-----------------------------------------------------------------------------
