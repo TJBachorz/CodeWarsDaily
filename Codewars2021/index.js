@@ -1,5 +1,5 @@
 //------------------------------------------------------------
-// 9/14/21
+// 9/14/21 -- fixing author
 
 function birthdayCakeCandles(candles) {
     let highest = 0;
