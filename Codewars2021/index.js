@@ -14,11 +14,27 @@ function birthdayCakeCandles(candles) {
 }
 
 //------------------------------------------------------------
+// 9/15/21
+
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    let appleCount = 0, orangeCount = 0;
+    const appleLandings = apples.map(apple => apple + a)
+    const orangeLandings = oranges.map(orange => orange + b)
+    for (const apple of appleLandings) {
+        if (apple >= s && apple <= t) appleCount +=1;
+    }
+    for (const orange of orangeLandings) {
+        if (orange >= s && orange <= t) orangeCount +=1;
+    }
+    console.log(appleCount);
+    console.log(orangeCount);
+}
+
+//------------------------------------------------------------
 // 9/16/21
 
 function compareTriplets(a, b) {
-    let aScore = 0;
-    let bScore = 0;
+    let aScore = 0, bScore = 0;
     const compareElements = i => {
         if (a[i] > b[i]) {
             aScore += 1;
