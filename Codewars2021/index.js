@@ -12,3 +12,25 @@ function birthdayCakeCandles(candles) {
         return candle === highest ? total += 1 : total;
     }, 0);
 }
+
+//------------------------------------------------------------
+// 9/16/21
+
+function compareTriplets(a, b) {
+    let aScore = 0;
+    let bScore = 0;
+    const compareElements = i => {
+        if (a[i] > b[i]) {
+            aScore += 1;
+        } 
+        if (b[i] > a[i]) {
+            bScore += 1;
+        }
+    }
+    compareElements(0);
+    compareElements(1);
+    compareElements(2);
+    return [aScore, bScore];
+}
+
+//------------------------------------------------------------
