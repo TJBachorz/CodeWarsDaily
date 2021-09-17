@@ -34,3 +34,18 @@ function compareTriplets(a, b) {
 }
 
 //------------------------------------------------------------
+// 9/17/21
+
+function gradingStudents(grades) {
+    const roundGrade = grade => {
+        if (grade < 38) return grade;
+        const remainder = grade % 5;
+        if (remainder === 3 || remainder === 4) {
+            return grade + (5 - remainder);
+        }
+        return grade
+    }
+    return grades.map(roundGrade);
+}
+
+//------------------------------------------------------------
