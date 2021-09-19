@@ -65,3 +65,10 @@ function gradingStudents(grades) {
 }
 
 //------------------------------------------------------------
+// 9/19/21
+
+function aVeryBigSum(ar) {
+    return ar.reduce((total, element) => total + element, 0)
+}
+
+//------------------------------------------------------------
