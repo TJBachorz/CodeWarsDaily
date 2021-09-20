@@ -72,3 +72,20 @@ function aVeryBigSum(ar) {
 }
 
 //------------------------------------------------------------
+// 9/20/21
+
+function sockMerchant(n, ar) {
+    const colors = Array.from(new Set(ar));
+    return colors.reduce((total, color) => {
+        let matches = 0;
+        ar.forEach(number => {
+            if (color === number) {
+                matches++;
+            }
+        });
+        total += Math.floor(matches / 2)
+        return total;
+    }, 0);
+}
+
+//------------------------------------------------------------
