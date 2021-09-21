@@ -89,3 +89,17 @@ function sockMerchant(n, ar) {
 }
 
 //------------------------------------------------------------
+// 9/21/21
+
+function countingValleys(steps, path) {
+    let vallies = 0;
+    let elevation = 0;
+    for (let i=0; i < path.length; i++) {
+        if (path.charAt(i) === 'U') elevation++;
+        if (path.charAt(i) === 'D') elevation--;
+        if (elevation === 0 && path.charAt(i) === 'U') vallies++;
+    }
+    return vallies;
+}
+
+//------------------------------------------------------------
