@@ -103,3 +103,15 @@ function countingValleys(steps, path) {
 }
 
 //------------------------------------------------------------
+// 9/23/21
+
+function jumpingOnClouds(c) {
+    let jumps = -1;
+    for (let i=0; i < c.length; i++) {
+        jumps++;
+        if (c[i+2] === 0) i++;
+    }
+    return jumps;
+}
+
+//------------------------------------------------------------
